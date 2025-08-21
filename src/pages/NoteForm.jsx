@@ -14,7 +14,7 @@ export default function NoteForm({ mode, createNote, getNote, updateNote }) {
   const reduce = useReducedMotion();
 
   useEffect(() => {
-    if (editing && !existing) navigate("/notes", { replace: true });
+    if (editing && !existing) navigate("/noteList", { replace: true });
   }, [editing, existing, navigate]);
 
   const onSubmit = (e) => {
@@ -26,10 +26,10 @@ export default function NoteForm({ mode, createNote, getNote, updateNote }) {
     const parsedTags = tags.split(",").map(t => t.trim()).filter(t => t.length > 0);
     if (editing) {
       updateNote(id, { title: title.trim(), content: content.trim(), tags: parsedTags });
-      navigate(`/notes/${id}`);
+      navigate(`/noteList/${id}`);
     } else {
       const newId = createNote({ title: title.trim(), content: content.trim(), tags: parsedTags });
-      navigate(`/notes/${newId}`);
+      navigate(`/noteList/${newId}`);
     }
   };
 

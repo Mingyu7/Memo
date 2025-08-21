@@ -14,9 +14,9 @@ export default function App() {
       <div className="max-w-4xl px-4 py-8 mx-auto">
         <Header onNew={() => navigate("/new")} />
         <Routes>
-          <Route path="/notes" element={<NotesList {...notesApi} />} />
-          <Route path="/" element={<Navigate to="/notes" replace />} />          
-          <Route path="/notes/:id" element={<NoteDetail {...notesApi} />} />
+          <Route path="/noteList" element={<NotesList {...notesApi} />} />
+          <Route path="/" element={<Navigate to="/noteList" replace />} />          
+          <Route path="/noteList/:id" element={<NoteDetail {...notesApi} />} />
           <Route path="/new" element={<NoteForm mode="create" {...notesApi} />} />
           <Route path="/edit/:id" element={<NoteForm mode="edit" {...notesApi} />} />
           <Route path="*" element={<p className="text-muted">페이지를 찾을 수 없습니다.</p>} />

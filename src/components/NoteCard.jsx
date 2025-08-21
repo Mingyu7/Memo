@@ -19,7 +19,7 @@ export default function NoteCard({ note, togglePin, setTagFilter }) {
         {note.pinned ? <HiMapPin /> : <HiOutlineMapPin />}
       </button>
       <h3 className="m-0 mb-2 text-base sm:text-lg font-semibold">
-        <Link to={`/notes/${note.id}`} className="hover:underline">
+        <Link to={`/noteList/${note.id}`} className="hover:underline">
           {note.title || "(제목 없음)"}
         </Link>
       </h3>

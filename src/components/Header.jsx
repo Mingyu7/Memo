@@ -20,7 +20,7 @@ export default function Header({ onNew }) {
         >
           새 메모
         </button>
-        <Link to="/notes" className="px-3 py-1.5 sm:px-4 sm:py-2 transition border rounded-xl border-app bg-card hover:bg-accent-weak">
+        <Link to="/noteList" className="px-3 py-1.5 sm:px-4 sm:py-2 transition border rounded-xl border-app bg-card hover:bg-accent-weak">
           목록
         </Link>
       </div>

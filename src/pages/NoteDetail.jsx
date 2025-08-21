@@ -8,13 +8,13 @@ export default function NoteDetail({ getNote, deleteNote }) {
   const note = getNote(id);
 
   if (!note) {
-    return <div className="p-4 sm:p-6 border rounded-2xl border-app bg-card">해당 메모가 없습니다. <Link className="underline" to="/notes">목록</Link></div>;
+    return <div className="p-4 sm:p-6 border rounded-2xl border-app bg-card">해당 메모가 없습니다. <Link className="underline" to="/noteList">목록</Link></div>;
   }
 
   const onDelete = () => {
     if (confirm("정말 삭제할까요? 되돌릴 수 없습니다.")) {
       deleteNote(id);
-      navigate("/notes");
+      navigate("/noteList");
     }
   };
 
@@ -36,7 +36,7 @@ export default function NoteDetail({ getNote, deleteNote }) {
       </div>
       <div className="whitespace-pre-line">{note.content || "(내용 없음)"}</div>
       <div className="mt-4">
-        <Link className="underline" to="/notes">← 목록으로</Link>
+        <Link className="underline" to="/noteList">← 목록으로</Link>
       </div>
     </motion.div>
   );
