@@ -7,7 +7,7 @@ import ThemeProvider from "./ThemeProvider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/Memo">
       <ThemeProvider>
         <App />
       </ThemeProvider>

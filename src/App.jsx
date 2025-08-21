@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import useLocalNotes from "./hooks/useLocalNotes";
 import Header from "./components/Header";
 import NotesList from "./pages/NotesList";
