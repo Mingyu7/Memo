@@ -14,8 +14,8 @@ export default function App() {
       <div className="max-w-4xl px-4 py-8 mx-auto">
         <Header onNew={() => navigate("/new")} />
         <Routes>
-          <Route path="/" element={<Navigate to="/notes" replace />} />
           <Route path="/notes" element={<NotesList {...notesApi} />} />
+          <Route path="/" element={<Navigate to="/notes" replace />} />          
           <Route path="/notes/:id" element={<NoteDetail {...notesApi} />} />
           <Route path="/new" element={<NoteForm mode="create" {...notesApi} />} />
           <Route path="/edit/:id" element={<NoteForm mode="edit" {...notesApi} />} />

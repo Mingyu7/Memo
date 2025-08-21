@@ -11,14 +11,15 @@ export default function useLocalNotes() {
       createdAt: Date.now(),
       updatedAt: Date.now(),
       pinned: true,
+      tags: ["예시"],
     }];
   });
 
   useEffect(() => localStorage.setItem(KEY, JSON.stringify(notes)), [notes]);
 
-  const createNote = ({ title, content }) => {
+  const createNote = ({ title, content, tags }) => {
     const now = Date.now();
-    const note = { id: now, title, content, createdAt: now, updatedAt: now, pinned: false };
+    const note = { id: now, title, content, createdAt: now, updatedAt: now, pinned: false, tags: tags || [] };
     setNotes((prev) => [note, ...prev]);
     return note.id;
   };
