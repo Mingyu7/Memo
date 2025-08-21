@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { fmtDate } from "../lib/format";
 import { motion } from "framer-motion";
-import { HiOutlinePin, HiPin } from "react-icons/hi2";
+import { HiOutlineMapPin, HiMapPin } from "react-icons/hi2";
 
 export default function NoteCard({ note, togglePin }) {
   return (
@@ -16,7 +16,7 @@ export default function NoteCard({ note, togglePin }) {
         className="absolute top-3 right-3 text-lg"
         onClick={() => togglePin(note.id)}
       >
-        {note.pinned ? <HiPin /> : <HiOutlinePin />}
+        {note.pinned ? <HiMapPin /> : <HiOutlineMapPin />}
       </button>
       <h3 className="m-0 mb-2 text-lg font-semibold">
         <Link to={`/notes/${note.id}`} className="hover:underline">
