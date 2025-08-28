@@ -1,1 +1,0 @@
-export const fmtDate = (ts) => new Date(ts).toLocaleString();
